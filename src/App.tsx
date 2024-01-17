@@ -1,12 +1,15 @@
-import React from 'react';
-import Home from './pages/home/home';
 import './App.css';
-
+import Home from './pages/home/Home';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-   <Home />
-  );
+    <>
+    <Navbar/>
+    <Home/>
+    <Footer/>
+    </>
+);
 }
-
 export default App;
