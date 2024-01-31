@@ -13,7 +13,7 @@ function Home() {
         <div className='container grid grid-cols-2 text-white'>
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h2 className='text-5xl font-bold'>Dev Web</h2>
-            <p className='text-xl'>Olá Dev {usuario.nome}!</p>
+            <p className='text-xl p-2 rounded-xl bg-blue-600'>Olá Dev {usuario.nome}!</p>
 
             <div className="flex justify-around gap-4">
               <ModalPostagem />

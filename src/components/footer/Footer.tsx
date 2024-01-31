@@ -10,17 +10,23 @@ function Footer() {
 
   let data = new Date().getFullYear()
 
-  if(usuario.token !== '') {
+  if (usuario.token !== '') {
     footerComponent = (
       <>
         <div className="flex justify-center bg-[#397eff] text-white">
           <div className="container flex flex-col items-center py-4">
-            <p className='text-xl font-bold'>Blog pessoal Generation | Copyright: {data}</p>
-            <p className='text-lg'>Acesse nossas redes sociais</p>
+            <p className='text-xl'>Blog pessoal Dev Web | Copyright: Dev RodrigoSchort {data}</p>
+            <p className='text-lg'>Acesse minhas redes sociais</p>
             <div className='flex gap-2'>
-              <LinkedinLogo size={48} weight='bold' />
-              <InstagramLogo size={48} weight='bold' />
-              <FacebookLogo size={48} weight='bold' />
+              <a href="https://www.linkedin.com/in/rodrigo-schort/">
+                <LinkedinLogo size={48} />
+              </a>
+              <a href="https://www.instagram.com/rodrigo_schort?igsh=eGgydTFranc5bm5s">
+                <InstagramLogo size={48} />
+              </a>
+              <a href="https://www.facebook.com/rodrigo.schort.94/">
+                <FacebookLogo size={48} />
+              </a>
             </div>
           </div>
         </div>
