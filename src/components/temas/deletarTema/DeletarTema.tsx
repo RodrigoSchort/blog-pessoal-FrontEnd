@@ -70,10 +70,10 @@ function DeletarTema() {
 
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
                 <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>Tema</header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
+                <p className='p-8 text-3xl bg-white h-full'>{tema.descricao}</p>
                 <div className="flex">
-                    <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-                    <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarTema}>
+                    <button className='my-4 mx-14 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-10 border border-blue-500 hover:border-transparent rounded' onClick={retornar}>Não</button>
+                    <button className='my-4 mx-14 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-10 border border-blue-500 hover:border-transparent rounded' onClick={deletarTema}>
                         Sim
                     </button>
                 </div>
