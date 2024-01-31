@@ -8,13 +8,13 @@ interface CardTemaProps {
 function CardTemas({tema}: CardTemaProps) {
   return (
     <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-      <header className='py-2 px-6 bg-indigo-800 text-white font-bold text-2xl'>Tema</header>
-      <p className='p-8 text-3xl bg-slate-200 h-full'>{tema.descricao}</p>
+      <header className='py-2 px-6 bg-[#4069b6] text-white font-bold text-2xl'>Tema</header>
+      <p className='p-8 text-3xl bg-white h-full'>{tema.descricao}</p>
       <div className="flex">
-        <Link to={`/editarTema/${tema.id}`} className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+        <Link to={`/editarTema/${tema.id}`} className='my-4 mx-10 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-10 border border-blue-500 hover:border-transparent rounded'>
           <button>Editar</button>
         </Link>
-        <Link to={`/deletarTema/${tema.id}`} className='text-slate-100 bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+        <Link to={`/deletarTema/${tema.id}`} className='my-4 mx-10 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-10 border border-blue-500 hover:border-transparent rounded'>
           <button>Deletar</button>
         </Link>
       </div>

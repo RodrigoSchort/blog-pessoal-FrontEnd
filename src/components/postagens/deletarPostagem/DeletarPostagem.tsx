@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { AuthContext } from '../../../contexts/AuthContext'
 import Postagem from '../../../models/Postagem'
 import { buscar, deletar } from '../../../services/Service'
+import { toastAlerta } from '../../../utils/toastAlert'
 
 function DeletarPostagem() {
   const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
@@ -23,7 +24,7 @@ function DeletarPostagem() {
       })
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        alert('O token expirou, favor logar novamente')
+        toastAlerta('Sua sessão expirou, favor logar novamente', 'info')
         handleLogout()
       }
     }
@@ -31,7 +32,7 @@ function DeletarPostagem() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado')
+      toastAlerta('Você precisa estar logado', 'info')
       navigate('/login')
     }
   }, [token])
@@ -54,10 +55,10 @@ function DeletarPostagem() {
         }
       })
 
-      alert('Postagem apagada com sucesso')
+      toastAlerta('Postagem apagada com sucesso', 'sucesso')
 
     } catch (error) {
-      alert('Erro ao apagar a Postagem')
+      toastAlerta('Erro ao apagar a Postagem', 'erro')
     }
 
     retornar()
@@ -75,8 +76,8 @@ function DeletarPostagem() {
           <p>{postagem.texto}</p>
         </div>
         <div className="flex">
-          <button className='my-4 mx-20 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-10 border border-blue-500 hover:border-transparent rounded' onClick={retornar}>Não</button>
-          <button className='my-4 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-10 border border-blue-500 hover:border-transparent rounded' onClick={deletarPostagem}>
+          <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
+          <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={deletarPostagem}>
             Sim
           </button>
         </div>

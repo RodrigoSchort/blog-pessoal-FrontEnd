@@ -23,7 +23,7 @@ function DeletarTema() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                alert('O token expirou, favor logar novamente')
+                alert('Sua sessão expirou, favor logar novamente')
                 handleLogout()
             }
         }
